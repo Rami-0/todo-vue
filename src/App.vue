@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <!-- cool -->
+  <!-- dev -->
   <h1>hello world</h1>
   <Main key="1" msg="i'm here" />
 </template>
