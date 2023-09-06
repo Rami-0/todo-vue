@@ -1,0 +1,15 @@
+@forward "variables";
+@import "@/assets/scss/_variables.scss"; 
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: $color-secondary;
+  background-color: $color-primary;
+}
+
+button {
+  color: $color-tertiary;
+  background-color: $color-secondary;
+  border: none;
+  background: none;
+}
