@@ -16,6 +16,7 @@ onBeforeMount(() => {
 		setDeviceFingerprint(fingerprint);
 	});
 });
+console.clear();
 </script>
 
 <template>
@@ -25,6 +26,7 @@ onBeforeMount(() => {
 		<Add />
 		<List />
 	</main>
+	<code class="code">note: this App is slow because it's working on mockApi be patient and enjoy! <strong><a target="_blank" href="https://github.com/Rami-0/todo-vue">Github</a></strong> </code>
 </template>
 
 <style scoped lang="scss">
@@ -45,10 +47,13 @@ onBeforeMount(() => {
 	}
 }
 @media (max-width: 768px) {
-	.todo__container{
+	.todo__container {
 		width: 120%;
 		height: 120%;
 		scale: 0.7;
+	}
+	.code {
+		margin: 40px;
 	}
 }
 </style>
