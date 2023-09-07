@@ -3,7 +3,7 @@ import { onMounted } from 'vue';
 import axios from '@/services/api.ts';
 import { getStore, setID, setData } from '@/store/deviceFingerprint.ts';
 import { Iuser } from '../types';
-import Item from '@/components/item.vue';
+import Item from '@/components/Item.vue';
 
 const store = getStore();
 
