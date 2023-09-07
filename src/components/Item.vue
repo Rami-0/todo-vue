@@ -28,7 +28,6 @@ watch(
 
 // Function to handle checkbox change
 const handleChange = async () => {
-	console.log(true);
 	try {
 		await changeTodoStatus(store.id.value, item.id, isChecked.value);
 		cheers('success', 'changed');
@@ -38,7 +37,6 @@ const handleChange = async () => {
 };
 
 const handleDeletion = async () => {
-	console.log(true);
 	try {
 		await deleteTodo(store.id.value, item.id);
 		cheers('success', 'deleted');
@@ -68,8 +66,8 @@ const toggleEditMode = () => {
 </script>
 
 <template>
-	<div class="list__item">
-		<main>
+	<div class="list__item" :key="item.id + 9999">
+		<main :class="{ checked: isChecked }">
 			<div class="list__item__checkboxContainer">
 				<input class="list__item__checkboxContainer--checkbox" v-if="!isEditing" type="checkbox" name="" id="" v-model="item.checked" @change="handleChange" />
 				<span @change="handleChange" v-if="!isEditing" class="list__item__checkboxContainer--checkmark"></span>
@@ -181,6 +179,13 @@ const toggleEditMode = () => {
 		.list__item--input:active {
 			outline: 1px solid $color-secondary;
 			border: none;
+		}
+	}
+
+	.checked{
+		.list__item--text{
+			text-decoration: line-through;
+			color: $color-secondary;
 		}
 	}
 	aside {
