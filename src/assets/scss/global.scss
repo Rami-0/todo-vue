@@ -1,15 +1,16 @@
 @forward "variables";
-@import "@/assets/scss/_variables.scss"; 
+@import "@/assets/scss/_variables.scss";
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: $color-secondary;
-  background-color: $color-primary;
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:wght@200;300;400;600&display=swap');
+
+
+@mixin list-flex {
+  display: flex;
+  flex-direction: column;
 }
 
-button {
-  color: $color-tertiary;
-  background-color: $color-secondary;
-  border: none;
-  background: none;
+@mixin stretched-flex{
+  display: flex;
+	justify-content: space-between;
+  gap: 10px;
 }
